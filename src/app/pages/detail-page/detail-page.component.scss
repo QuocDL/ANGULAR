@@ -1,0 +1,16 @@
+@media only screen and (max-width: 488px) {
+    .systemClass {
+        font-size: 12px;
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 766px) {
+    .systemClass {
+        display: block;
+    }
+
+    .titleClass {
+        width: 100%;
+    }
+}

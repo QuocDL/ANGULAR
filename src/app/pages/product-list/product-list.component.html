@@ -1,0 +1,24 @@
+<div class="my-[25px] ">
+    <h1 class="font-bold ml-[7%] mb-[15px] text-[25px] text-gray-200">Game Library</h1>
+    <div class="product-flex flex  flex-wrap justify-center gap-10" *ngIf="products && products.length">
+        <div *ngFor="let product of products">
+            <a routerLink="{{product.id}}" class="block max-w-sm p-6 bg-gray-900 rounded-lg shadow">
+                <div>
+                    <img src={{product.thumbnail}} alt="">
+                </div>
+                <h5
+                    class="mb-2 text-2xl font-bold tracking-tight text-gray-300 whitespace-nowrap overflow-hidden text-ellipsis">
+                    {{product.title}} </h5>
+                <p class="text-[15px] whitespace-nowrap text-gray-700 dark:text-gray-400 overflow-hidden text-ellipsis">
+                    {{product.short_description}}</p>
+                <div class="mt-[15px] flex justify-between">
+                    <span class="font-medium text-[12px] text-gray-600">Genre: <span
+                            class="text-[12px]  text-gray-700 dark:text-gray-400">{{product.genre}}</span> </span>
+                    <span class="text-[12px]  text-gray-700 dark:text-gray-400">{{product.platform}}</span>
+                </div>
+                <button routerLink="{{product.id}}"
+                    class="mt-[15px] w-[100%] bg-red-600 p-1 rounded-[10px] text-white hover:bg-red-800 font-medium">ViewDetail</button>
+            </a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,131 @@
+<section class=" mx-[1.5%] bg-black">
+    <div class="max-w-6xl pt-4 mx-auto">
+        <div class="flex flex-wrap">
+            <div class="w-full mb-8 md:w-1/2 md:mb-0">
+                <div class="sticky top-0  overflow-hidden ">
+                    <div class="relative mb-6 lg:mb-10 lg:h-2/4 ">
+                        <img src={{Product.thumbnail}} alt="" class="object-cover w-full lg:h-full ">
+                    </div>
+                </div>
+            </div>
+            <div class="w-full px-4 md:w-1/2 ">
+                <div class="lg:pl-20">
+                    <div class="mb-6 ">
+                        <h2 class="max-w-xl mb-2 text-2xl font-bold text-white md:text-4xl">
+                            {{Product.title}}</h2>
+                        <div class="flex justify-between">
+                            <p class="inline-block mb-2 text-[15px] font-bold text-gray-700 dark:text-gray-400 ">
+                                <span>Platform: </span>
+                                <span
+                                    class="text-base font-normal text-gray-500 dark:text-gray-400">{{Product.platform}}</span>
+                            </p>
+                            <p class="mb-6 text-[15px] font-bold text-gray-700 dark:text-gray-400 ">
+                                <span>Relase Date: </span>
+                                <span
+                                    class="text-base font-normal text-gray-500 dark:text-gray-400">{{Product.release_date}}</span>
+                            </p>
+                        </div>
+                        <p class="max-w-md text-gray-700 dark:text-gray-400">
+                            {{Product.short_description}}
+                        </p>
+                    </div>
+                    <p class="text-[15px] font-bold  text-gray-700 dark:text-gray-400">
+                        <span>Developer: </span>
+                        <span
+                            class="text-base font-normal text-gray-500 dark:text-gray-400">{{Product.developer}}</span>
+                    </p>
+                    <p class="text-[15px] font-bold mb-[15px] text-gray-700 dark:text-gray-400">
+                        <span>Publisher: </span>
+                        <span
+                            class="text-base font-normal text-gray-500 dark:text-gray-400">{{Product.publisher}}</span>
+                    </p>
+                    <div class="flex flex-wrap items-center gap-4">
+                        <a target="_blank" href="{{Product.game_url}}"
+                            class="w-[100%] p-4 font-medium flex justify-center bg-red-500 text-white rounded-md  hover:bg-blue-600 dark:bg-red-500 dark:hover:bg-red-700">
+                            PlayGame
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="pb-6 mt-6 border-t border-gray-300 dark:border-gray-400">
+            <div class="mt-[25px]">
+                <h1 class="titleClass font-medium bg-red-600 w-1/4 text-center p-2 text-white rounded-[5px]">System
+                    Requirements</h1>
+                <div class="systemClass flex justify-between mt-[25px]">
+                    <div class="w-[100%] pb-[15px]" style="border: 1px solid rgb(107 114 128);">
+                        <h1 class="w-[100%] text-center text-white font-medium bg-gray-800 p-2">
+                            {{Product.system_requirements_medium?.medium?.System_Play || "N/A"}}</h1>
+                        <ul class="mt-[15px] pl-8 text-gray-300 list-disc">
+                            <li>CPU: <span class="font-medium">{{Product.system_requirements_medium?.medium?.cpu ||
+                                    "N/A"}}</span></li>
+                            <li>Ram: <span class="font-medium">{{Product.system_requirements_medium?.medium?.ram ||
+                                    "N/A"}}</span></li>
+                            <li>Graphics Card: <span
+                                    class="font-medium">{{Product.system_requirements_medium?.medium?.card ||
+                                    "N/A"}}</span>
+                            </li>
+                            <li>Card Ram: <span
+                                    class="font-medium">{{Product.system_requirements_medium?.medium?.card_ram ||
+                                    "N/A"}}</span>
+                            </li>
+                            <li>OS: <span class="font-medium">{{Product.system_requirements_medium?.medium?.os ||
+                                    "N/A"}}</span></li>
+                            <li>FreeDisk: <span
+                                    class="font-medium">{{Product.system_requirements_medium?.medium?.freedisk ||
+                                    "N/A"}}</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div  class=" w-[100%] pb-[15px] border-gray-500 border-1" style="border: 1px solid rgb(107 114 128);">
+                        <h1 class="w-[100%] text-center text-white font-medium bg-gray-800 p-2">
+                            {{Product.system_requirements_medium?.playgood?.System_Play || "N/A"}}</h1>
+                        <ul class="mt-[15px] pl-8 text-gray-300 list-disc">
+                            <li>CPU: <span class="font-medium">{{Product.system_requirements_medium?.playgood?.cpu ||
+                                    "N/A"}}</span></li>
+                            <li>Ram: <span class="font-medium">{{Product.system_requirements_medium?.playgood?.ram ||
+                                    "N/A"}}</span></li>
+                            <li>Graphics Card: <span
+                                    class="font-medium">{{Product.system_requirements_medium?.playgood?.card ||
+                                    "N/A"}}</span>
+                            </li>
+                            <li>Card Ram: <span
+                                    class="font-medium">{{Product.system_requirements_medium?.playgood?.card_ram ||
+                                    "N/A"}}</span>
+                            </li>
+                            <li>OS: <span class="font-medium">{{Product.system_requirements_medium?.playgood?.os ||
+                                    "N/A"}}</span></li>
+                            <li>FreeDisk: <span
+                                    class="font-medium">{{Product.system_requirements_medium?.playgood?.freedisk ||
+                                    "N/A"}}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div  class="mt-[25px]">
+                <div *ngIf="Product.freetogame_profile_url">
+                    <h1 class="titleClass font-medium bg-red-600 w-1/4 text-center p-2 text-white rounded-[5px]">Trailer
+                    </h1>
+                    <div class="mt-4 flex justify-center">
+                        <iframe class="video" width="1080" height="580" [src]="Product.freetogame_profile_url| safe"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div *ngIf="Product.gameplay">
+                    <h1 class="titleClass font-medium mt-4 bg-red-600 w-1/4 text-center p-2 text-white rounded-[5px]">
+                        GamePlay</h1>
+                    <div class="my-4 flex justify-center">
+                        <iframe class="video w-[1080px h-580px]" width="1080" height="580" [src]="Product.gameplay | safe"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

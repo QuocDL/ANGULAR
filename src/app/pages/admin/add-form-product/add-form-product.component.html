@@ -1,0 +1,82 @@
+<div class="inline">
+    <a href="">Back To Product</a>
+</div>
+<div class="flex justify-center">
+  <div class="bg-gray-800 p-10 rounded-lg shadow-2xl">
+   <div class="mb-[25px]">
+    <h1 class="text-center font-bold text-[18px] text-gray-300">Add New Game</h1>
+   </div>
+    <form #addproduct="ngForm" (ngSubmit)="submit(addproduct.value)" class="text-gray-300" action="">
+    <div class="flex gap-5">
+        <div class="box-left">
+              
+           <div>
+                <div class="mb-[5px]">
+                    <label class="block mb-[2px] text-white font-medium" for="">Title</label>
+                    <input name="title" ngModel type="text" class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1"
+                        placeholder="Enter Your Title">
+                </div>
+                <div class="mb-[5px]">
+                    <label class="block mb-[2px] text-white font-medium" for="">Thumbnail</label>
+                    <input name="thumbnail" ngModel type="text" class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1"
+                        placeholder="Enter Your URL thumbnail">
+                </div>
+                <div class="mb-[5px]">
+                    <label class="block  mb-[2px] text-white font-medium" for="">Game URL</label>
+                    <input name="game_url" ngModel type="text" class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1"
+                        placeholder="Enter Your URL game">
+                </div>
+                <div class="mb-[5px]">
+                    <label class="block  mb-[2px] text-white font-medium" for="">Developer</label>
+                    <input name="developer" ngModel type="text" class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1"
+                        placeholder="Enter Name Developer">
+                </div>
+                <div class="mb-[5px]">
+                    <label class="block  mb-[2px] text-white font-medium" for="">Publisher</label>
+                    <input name="publisher" ngModel type="text" class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1"
+                        placeholder="Enter Name Developer">
+                </div>
+                <div class="mb-[5px]">
+                    <label class="block  mb-[2px] text-white font-medium" for="">Genre</label>
+                    <input name="genre" ngModel type="text" class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1"
+                        placeholder="Enter Name genre">
+                </div>
+                <div class="mb-[5px]">
+                    <label class="block mb-[2px] text-white font-medium" for="">Description</label>
+                    <textarea class="bg-gray-500 rounded-[5px] p-1" name="short_description" ngModel id="" cols="32"
+                        rows="1"></textarea>
+                </div>
+                </div>
+           </div>
+                <div>
+                    <div class="mb-[5px]">
+                        <label class="block mb-[2px] text-white font-medium" for="">Platform</label>
+                        <select class="bg-gray-500 rounded-lg" name="platform" ngModel id="">
+                            <option value="PC (Windows)">Pc (Windows)</option>
+                            <option value="Web Browser">Web Browser</option>
+                            <option value="Mobile">Mobile</option>
+                        </select>
+                    </div>
+                    <div class="mb-[5px]">
+                        <label class="block mb-[2px] text-white font-medium" for="">Trailer URL</label>
+                        <input name="freetogame_profile_url" ngModel type="text" class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1"
+                            placeholder="Enter Your URL Trailer">
+                    </div>
+                    <div class="mb-[5px]">
+                        <label class="block  mb-[2px] text-white font-medium" for="">GamePlay URL</label>
+                        <input name="gameplay" ngModel type="text" class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1"
+                            placeholder="Enter Your URL game">
+                    </div>
+                    <div class="mb-[5px]">
+                        <label class="block  mb-[2px] text-white font-medium" for="">Release Date</label>
+                        <input name="release_date" ngModel type="date" class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1"
+                            placeholder="Enter Name Release Date">
+                    </div>
+                </div>
+        </div>
+        <div class="mt-[25px] flex justify-center">
+            <button class="bg-red-500 p-2 rounded-lg font-medium">Add Game</button>
+        </div>
+    </form>
+  </div>
+</div>
