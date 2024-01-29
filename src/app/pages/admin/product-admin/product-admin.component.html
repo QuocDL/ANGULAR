@@ -49,7 +49,7 @@
                 
                 <td class="flex items-center gap-2 px-6 py-4">
                     <button (click)="deleteProduct(product.id)" class="font-bold  text-red-500 hover:underline">Delete</button>
-                    <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                    <a routerLink="edit/{{product.id}}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                 </td>
             </tr>
         </tbody>

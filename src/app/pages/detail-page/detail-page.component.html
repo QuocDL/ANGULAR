@@ -2,8 +2,8 @@
     <div class="max-w-6xl pt-4 mx-auto">
         <div class="flex flex-wrap">
             <div class="w-full mb-8 md:w-1/2 md:mb-0">
-                <div class="sticky top-0  overflow-hidden ">
-                    <div class="relative mb-6 lg:mb-10 lg:h-2/4 ">
+                <div class=" overflow-hidden ">
+                    <div class=" mb-6 lg:mb-10 lg:h-2/4 ">
                         <img src={{Product.thumbnail}} alt="" class="object-cover w-full lg:h-full ">
                     </div>
                 </div>
@@ -56,48 +56,48 @@
                 <div class="systemClass flex justify-between mt-[25px]">
                     <div class="w-[100%] pb-[15px]" style="border: 1px solid rgb(107 114 128);">
                         <h1 class="w-[100%] text-center text-white font-medium bg-gray-800 p-2">
-                            {{Product.system_requirements_medium?.medium?.System_Play || "N/A"}}</h1>
+                            {{SystemProduct.medium.System_Play || "N/A"}}</h1>
                         <ul class="mt-[15px] pl-8 text-gray-300 list-disc">
-                            <li>CPU: <span class="font-medium">{{Product.system_requirements_medium?.medium?.cpu ||
+                            <li>CPU: <span class="font-medium">{{SystemProduct.medium.cpu ||
                                     "N/A"}}</span></li>
-                            <li>Ram: <span class="font-medium">{{Product.system_requirements_medium?.medium?.ram ||
+                            <li>Ram: <span class="font-medium">{{SystemProduct.medium.ram ||
                                     "N/A"}}</span></li>
                             <li>Graphics Card: <span
-                                    class="font-medium">{{Product.system_requirements_medium?.medium?.card ||
+                                    class="font-medium">{{SystemProduct.medium.card ||
                                     "N/A"}}</span>
                             </li>
                             <li>Card Ram: <span
-                                    class="font-medium">{{Product.system_requirements_medium?.medium?.card_ram ||
+                                    class="font-medium">{{SystemProduct.medium.card_ram ||
                                     "N/A"}}</span>
                             </li>
-                            <li>OS: <span class="font-medium">{{Product.system_requirements_medium?.medium?.os ||
+                            <li>OS: <span class="font-medium">{{SystemProduct.medium.os ||
                                     "N/A"}}</span></li>
                             <li>FreeDisk: <span
-                                    class="font-medium">{{Product.system_requirements_medium?.medium?.freedisk ||
+                                    class="font-medium">{{SystemProduct.medium.freedisk ||
                                     "N/A"}}</span>
                             </li>
                         </ul>
                     </div>
                     <div  class=" w-[100%] pb-[15px] border-gray-500 border-1" style="border: 1px solid rgb(107 114 128);">
                         <h1 class="w-[100%] text-center text-white font-medium bg-gray-800 p-2">
-                            {{Product.system_requirements_medium?.playgood?.System_Play || "N/A"}}</h1>
+                            {{SystemProduct.playgood.System_Play || "N/A"}}</h1>
                         <ul class="mt-[15px] pl-8 text-gray-300 list-disc">
-                            <li>CPU: <span class="font-medium">{{Product.system_requirements_medium?.playgood?.cpu ||
+                            <li>CPU: <span class="font-medium">{{SystemProduct.playgood.cpu ||
                                     "N/A"}}</span></li>
-                            <li>Ram: <span class="font-medium">{{Product.system_requirements_medium?.playgood?.ram ||
+                            <li>Ram: <span class="font-medium">{{SystemProduct.playgood.ram ||
                                     "N/A"}}</span></li>
                             <li>Graphics Card: <span
-                                    class="font-medium">{{Product.system_requirements_medium?.playgood?.card ||
+                                    class="font-medium">{{SystemProduct.playgood.card ||
                                     "N/A"}}</span>
                             </li>
                             <li>Card Ram: <span
-                                    class="font-medium">{{Product.system_requirements_medium?.playgood?.card_ram ||
+                                    class="font-medium">{{SystemProduct.playgood.card_ram ||
                                     "N/A"}}</span>
                             </li>
-                            <li>OS: <span class="font-medium">{{Product.system_requirements_medium?.playgood?.os ||
+                            <li>OS: <span class="font-medium">{{SystemProduct.playgood.os ||
                                     "N/A"}}</span></li>
                             <li>FreeDisk: <span
-                                    class="font-medium">{{Product.system_requirements_medium?.playgood?.freedisk ||
+                                    class="font-medium">{{SystemProduct.playgood.freedisk ||
                                     "N/A"}}</span>
                             </li>
                         </ul>

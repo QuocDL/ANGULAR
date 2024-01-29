@@ -12,5 +12,5 @@ export const adminRoutes = [
     { path: "product", component: ProductAdminComponent },
     { path: "product/addproduct", component: AddFormProductComponent },
     // { path: "product/add", component: ProductFormComponent },
-    // { path: "product/:id/edit", component: ProductFormComponent }
+    { path: "product/edit/:id", component: AddFormProductComponent }
 ]

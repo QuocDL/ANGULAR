@@ -1,81 +1,168 @@
 <div class="inline">
-    <a href="">Back To Product</a>
+    <a routerLink="/admin/product">Back To Product</a>
 </div>
 <div class="flex justify-center">
   <div class="bg-gray-800 p-10 rounded-lg shadow-2xl">
    <div class="mb-[25px]">
-    <h1 class="text-center font-bold text-[18px] text-gray-300">Add New Game</h1>
+    <h1 class="text-center font-bold text-[18px] text-gray-300">{{editMode? "Update " + product.title : "Add New Game"}}</h1>
    </div>
-    <form #addproduct="ngForm" (ngSubmit)="submit(addproduct.value)" class="text-gray-300" action="">
+    <form (ngSubmit)="submit()" class="text-gray-300" action="">
     <div class="flex gap-5">
         <div class="box-left">
-              
            <div>
                 <div class="mb-[5px]">
                     <label class="block mb-[2px] text-white font-medium" for="">Title</label>
-                    <input name="title" ngModel type="text" class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1"
+                    <input name="title" [(ngModel)]="product.title" type="text" class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1"
                         placeholder="Enter Your Title">
                 </div>
                 <div class="mb-[5px]">
                     <label class="block mb-[2px] text-white font-medium" for="">Thumbnail</label>
-                    <input name="thumbnail" ngModel type="text" class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1"
+                    <input name="thumbnail"  [(ngModel)]="product.thumbnail"  type="text" class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1"
                         placeholder="Enter Your URL thumbnail">
                 </div>
                 <div class="mb-[5px]">
                     <label class="block  mb-[2px] text-white font-medium" for="">Game URL</label>
-                    <input name="game_url" ngModel type="text" class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1"
+                    <input name="game_url"  [(ngModel)]="product.game_url"  type="text" class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1"
                         placeholder="Enter Your URL game">
                 </div>
+           
                 <div class="mb-[5px]">
-                    <label class="block  mb-[2px] text-white font-medium" for="">Developer</label>
-                    <input name="developer" ngModel type="text" class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1"
+                    <label class="block mb-[2px] text-white font-medium" for="">Description</label>
+                    <textarea class="bg-gray-500 h-[95px] rounded-[5px] p-1"  [(ngModel)]="product.short_description"  name="short_description"  id="" cols="32.5"
+                        rows="3"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="box-right">
+            <div>
+                <div class="mb-[5px]">
+                    <label class="block mb-[2px] text-white font-medium" for="">Platform</label>
+                    <select class="bg-gray-500 rounded-lg p-1 w-[100%]"  [(ngModel)]="product.platform"  name="platform" id="">
+                        <option value="PC (windows)">PC (windows)</option>
+                        <option value="Mobile">Mobile</option>
+                        <option value="Web Browser">Web Browser</option>
+                        <option value="Ps4/5">Ps4/5</option>
+                    </select>
+                </div>
+                <div class="mb-[5px]">
+                    <label class="block mb-[2px] text-white font-medium" for="">Developer</label>
+                    <input name="developer"  [(ngModel)]="product.developer"  type="text" class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1"
                         placeholder="Enter Name Developer">
                 </div>
                 <div class="mb-[5px]">
                     <label class="block  mb-[2px] text-white font-medium" for="">Publisher</label>
-                    <input name="publisher" ngModel type="text" class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1"
-                        placeholder="Enter Name Developer">
+                    <input name="game_url"  [(ngModel)]="product.publisher"  type="text" class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1"
+                        placeholder="Enter name Publisher">
                 </div>
                 <div class="mb-[5px]">
                     <label class="block  mb-[2px] text-white font-medium" for="">Genre</label>
-                    <input name="genre" ngModel type="text" class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1"
-                        placeholder="Enter Name genre">
+                    <input name="genre"  [(ngModel)]="product.genre"  type="text" class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1"
+                        placeholder="Enter Genre">
+                </div>
+             
+                <div class="mb-[5px]">
+                    <label class="block  mb-[2px] text-white font-medium" for="">Release Date</label>
+                    <input name="release_date"  [(ngModel)]="product.release_date"  type="date" class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1"
+                        placeholder="Enter Name Developer">
+                </div>         
+            </div>
+        </div>
+    </div>
+    <h1 class="text-center font-medium my-[25px]">System Requirements</h1>
+    <div class="flex gap-5">
+        <div class="box-meidum">
+            <div>
+                <h1>{{product.system_requirements_medium.medium.System_Play}}</h1>
+                <div class="mb-[5px]">
+                    <label class="block mb-[2px] text-white font-medium" for="">CPU</label>
+                    <input name="lowcpu"  [(ngModel)]="product.system_requirements_medium.medium.cpu"  type="text" class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1"
+                        placeholder="Enter Name CPU">
                 </div>
                 <div class="mb-[5px]">
-                    <label class="block mb-[2px] text-white font-medium" for="">Description</label>
-                    <textarea class="bg-gray-500 rounded-[5px] p-1" name="short_description" ngModel id="" cols="32"
-                        rows="1"></textarea>
+                    <label class="block mb-[2px] text-white font-medium" for="">RAM</label>
+                    <input name="lowram" [(ngModel)]="product.system_requirements_medium.medium.ram"  type="text" class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1"
+                        placeholder="Enter RAM">
                 </div>
+                <div class="mb-[5px]">
+                    <label class="block  mb-[2px] text-white font-medium" for="">GRAPHICS CARD</label>
+                    <input name="lowcard" [(ngModel)]="product.system_requirements_medium.medium.card" type="text" class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1"
+                        placeholder="Enter name Card">
                 </div>
-           </div>
-                <div>
-                    <div class="mb-[5px]">
-                        <label class="block mb-[2px] text-white font-medium" for="">Platform</label>
-                        <select class="bg-gray-500 rounded-lg" name="platform" ngModel id="">
-                            <option value="PC (Windows)">Pc (Windows)</option>
-                            <option value="Web Browser">Web Browser</option>
-                            <option value="Mobile">Mobile</option>
-                        </select>
-                    </div>
-                    <div class="mb-[5px]">
-                        <label class="block mb-[2px] text-white font-medium" for="">Trailer URL</label>
-                        <input name="freetogame_profile_url" ngModel type="text" class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1"
-                            placeholder="Enter Your URL Trailer">
-                    </div>
-                    <div class="mb-[5px]">
-                        <label class="block  mb-[2px] text-white font-medium" for="">GamePlay URL</label>
-                        <input name="gameplay" ngModel type="text" class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1"
-                            placeholder="Enter Your URL game">
-                    </div>
-                    <div class="mb-[5px]">
-                        <label class="block  mb-[2px] text-white font-medium" for="">Release Date</label>
-                        <input name="release_date" ngModel type="date" class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1"
-                            placeholder="Enter Name Release Date">
-                    </div>
+                <div class="mb-[5px]">
+                    <label class="block  mb-[2px] text-white font-medium" for="">GRAPHICS MEMORY</label>
+                    <input name="lowcard_ram" [(ngModel)]="product.system_requirements_medium.medium.card_ram"  type="text" class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1"
+                        placeholder="Enter MEMORY">
                 </div>
+                <div class="mb-[5px]">
+                        <label class="block  mb-[2px] text-white font-medium" for="">FREEDISK</label>
+                        <input name="lowfreedisk" [(ngModel)]="product.system_requirements_medium.medium.freedisk" type="text" class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1" placeholder="Enter disk">
+                </div>
+                <div class="mb-[5px]">
+                    <label class="block  mb-[2px] text-white font-medium" for="">OS</label>
+                    <select class="bg-gray-500 rounded-lg p-1 w-[260px]" [(ngModel)]="product.system_requirements_medium.medium.os" name="lowos" id="">
+                        <option value="Windows® 10 64-bit (latest Service Pack)">Windows® 10 64-bit (latest Service Pack)</option>
+                        <option value="Mobile">Mobile</option>
+                        <option value="Web Browser">Web Browser</option>
+                        <option value="Ps4/5">Ps4/5</option>
+                    </select>
+                </div>
+            </div>
         </div>
+        <div class="box-good">
+            <div>
+                <h1>{{product.system_requirements_medium.playgood.System_Play}}</h1>
+                <div class="mb-[5px]" >
+                    <label class="block mb-[2px] text-white font-medium" for="">CPU</label>
+                    <input name="cpu" [(ngModel)]="product.system_requirements_medium.playgood.cpu" type="text" class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1"
+                        placeholder="Enter Name CPU">
+                </div>
+                <div class="mb-[5px]">
+                    <label class="block mb-[2px] text-white font-medium" for="">RAM</label>
+                    <input name="ram" type="text" [(ngModel)]="product.system_requirements_medium.playgood.ram" class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1" placeholder="Enter RAM">
+                </div>
+                <div class="mb-[5px]">
+                    <label class="block  mb-[2px] text-white font-medium" for="">GRAPHICS CARD</label>
+                    <input name="card" type="text" [(ngModel)]="product.system_requirements_medium.playgood.card" class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1"
+                        placeholder="Enter name Card">
+                </div>
+                <div class="mb-[5px]">
+                    <label class="block  mb-[2px] text-white font-medium" for="">GRAPHICS MEMORY</label>
+                    <input name="card_ram" type="text" [(ngModel)]="product.system_requirements_medium.playgood.card_ram" class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1"
+                        placeholder="Enter MEMORY">
+                </div>
+                <div class="mb-[5px]">
+                    <label class="block  mb-[2px] text-white font-medium" for="">FREEDISK</label>
+                    <input name="freedisk" type="text" [(ngModel)]="product.system_requirements_medium.playgood.freedisk" class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1"
+                        placeholder="Enter disk">
+                </div>
+                <div class="mb-[5px]">
+                    <label class="block  mb-[2px] text-white font-medium" for="">OS</label>
+                    <select class="bg-gray-500 rounded-lg p-1 w-[260px]" [(ngModel)]="product.system_requirements_medium.playgood.os" name="os" id="">
+                        <option value="Windows® 10 64-bit (latest Service Pack)">Windows® 10 64-bit (latest Service Pack)
+                        </option>
+                        <option value="Mobile">Mobile</option>
+                        <option value="Web Browser">Web Browser</option>
+                        <option value="Ps4/5">Ps4/5</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h1 class=" mt-[25px] mb-[10px] font-bold text-center">GAME VIDEO</h1>
+    <div class="video flex gap-5">
+        <div class="mb-[5px]">
+            <label class="block mb-[2px] text-white font-medium" for="">VIDEO TRAILER</label>
+            <input name="trailer" [(ngModel)]="product.freetogame_profile_url" type="text"
+                class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1" placeholder="Enter URL">
+        </div>
+        <div class="mb-[5px]">
+            <label class="block  mb-[2px] text-white font-medium" for="">VIDEO GAMEPLAY</label>
+            <input name="gameplay" [(ngModel)]="product.gameplay" type="text"
+                class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1" placeholder="Enter URL">
+        </div>
+    </div>
         <div class="mt-[25px] flex justify-center">
-            <button class="bg-red-500 p-2 rounded-lg font-medium">Add Game</button>
+            <button type="submit" class="bg-red-500 p-2 rounded-lg font-medium">{{editMode? "Update " + product.title : "Add Game"}}</button>
         </div>
     </form>
   </div>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Product } from '../../interfaces/product';
+import { Product, systemType } from '../../interfaces/product';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from '../../services/product.service';
 
@@ -10,6 +10,26 @@ import { ProductService } from '../../services/product.service';
 })
 export class DetailPageComponent {
   Product!: Product
+  SystemProduct:systemType =  {
+     medium: {
+        System_Play: "Medium",
+        cpu: '',
+        ram: '',
+        card: '',
+        card_ram: '',
+        os: '',
+        freedisk: ''
+      },
+      playgood: {
+        System_Play: "Play Good",
+        cpu: '',
+        ram: '',
+        card: '',
+        card_ram: '',
+        os: '',
+        freedisk: ''
+      }
+  }
   constructor(
     private service: ProductService,
     private route: ActivatedRoute
@@ -24,6 +44,7 @@ export class DetailPageComponent {
   loadProducts():void{
     const id = this.route.snapshot.paramMap.get('id')
     this.service.getDetailProduct(id).subscribe((e)=>{
+      this.SystemProduct = e.system_requirements_medium
       this.Product = e
     })
   }

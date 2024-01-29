@@ -16,16 +16,18 @@
       "gameplay": "https://www.youtube.com/embed/lkTHRdZzl1o?si=sOoyKsHYykQKmuxD",
       "system_requirements_medium": {
         "medium": {
+          "System_Play": "Requirements",
           "cpu": "Intel® Core™ i3 or AMD Phenom™ X3 8650",
-          "ram": "6 GB",
+          "ram": "8 GB",
           "card": "NVIDIA® GeForce® GTX 600 series, AMD Radeon™ HD 7000 series",
           "card_ram": "512MB",
-          "os": "Windows® 7 / Windows® 8 / Windows® 10 64-bit (latest Service Pack)",
+          "os": "Windows® 10 64-bit (latest Service Pack)",
           "freedisk": "50GB"
         },
         "playgood": {
+          "System_Play": "Play Better",
           "cpu": "Intel® Core™ i7 or AMD Ryzen™ 5",
-          "ram": "8 GB",
+          "ram": "16 GB",
           "card": "NVIDIA® GeForce® GTX 1060 or AMD R9 380",
           "card_ram": "2048MB",
           "os": "Windows® 10 64-bit (latest Service Pack)",
@@ -490,18 +492,72 @@
       "gameplay": "https://www.youtube.com/embed/SIpJFTxjmNQ"
     },
     {
-      "id": "fd4c",
+      "id": "57fd",
       "title": "Only Up!",
+      "short_description": "Get set to defy gravity, leap like never before, and experience the exhilarating world of parkour in a whole new light! This isn’t just your ordinary parkour jump simulator - it’s a dynamic ONLINE MULTIPLAYER adventure that transforms your every move into a gravity-defying spectacle.",
       "thumbnail": "https://cdn.akamai.steamstatic.com/steam/apps/2562240/capsule_616x353.jpg?t=1696335776",
-      "game_url": "https://store.steampowered.com/app/2562240/Only_Up/?l=vietnamese",
+      "genre": "Adventure",
+      "game_url": "https://store.steampowered.com/app/2562240/Only_Up/",
+      "freetogame_profile_url": "https://www.youtube.com/embed/iAcyzB8SO5c?si=172QyYbUBzWxRPXL",
+      "gameplay": "https://www.youtube.com/embed/bVFsHqvaI70",
       "developer": " MoreMoto Games",
       "publisher": " MoreMoto Games",
+      "platform": "PC (windows)",
+      "release_date": "2023-03-10",
+      "system_requirements_medium": {
+        "medium": {
+          "System_Play": "Medium",
+          "cpu": "Intel Core i5-6600@ 3.1 GHz or AMD R5 1600X @ 3.5 GHz or equivalent",
+          "ram": "8 GB",
+          "card": " NVIDIA GeForce GTX 1650 or equivalent",
+          "card_ram": "4096 MB",
+          "os": "Windows® 10 64-bit (latest Service Pack)",
+          "freedisk": "6 GB"
+        },
+        "playgood": {
+          "System_Play": "Play Good",
+          "cpu": "Intel Core i5 10400 3.1 GHz or AMD Ryzen 5 2600X 3.1 GHz",
+          "ram": "16 GB",
+          "card": " NVIDIA GeForce RTX 3060 or equivalent",
+          "card_ram": "8 GB",
+          "os": "Windows® 10 64-bit (latest Service Pack)",
+          "freedisk": "6 GB"
+        }
+      }
+    },
+    {
+      "id": "c57e",
+      "title": "RAFT",
+      "short_description": "Raft™ throws you and your friends into an epic oceanic adventure! Alone or together, players battle to survive a perilous voyage across a vast sea! Gather debris, scavenge reefs and build your own floating home, but be wary of the man-eating sharks!",
+      "thumbnail": "https://cdn.cloudflare.steamstatic.com/steam/apps/648800/capsule_616x353.jpg?t=1693638925",
       "genre": "Adventure",
-      "short_description": "Get set to defy gravity, leap like never before, and experience the exhilarating world of parkour in a whole new light! This isn’t just your ordinary parkour jump simulator - it’s a dynamic ONLINE MULTIPLAYER adventure that transforms your every move into a gravity-defying spectacle.",
-      "platform": "Web Browser",
-      "freetogame_profile_url": "https://www.youtube.com/embed/iAcyzB8SO5c",
-      "gameplay": "",
-      "release_date": "2024-01-04"
+      "game_url": "https://store.steampowered.com/app/648800/Raft/?l=vietnamese",
+      "freetogame_profile_url": "https://www.youtube.com/embed/58zeu7HA4cA",
+      "gameplay": "https://www.youtube.com/embed/SFuI9ASo_U4",
+      "developer": "Redbeet Interactive",
+      "publisher": " Axolot Games",
+      "platform": "PC (windows)",
+      "release_date": "2022-02-01",
+      "system_requirements_medium": {
+        "medium": {
+          "System_Play": "Medium",
+          "cpu": "Intel Core i5 2.6GHz or similar",
+          "ram": "6 GB",
+          "card": "GeForce GTX 700 series or similar",
+          "card_ram": "1024MB",
+          "os": "Windows® 10 64-bit (latest Service Pack)",
+          "freedisk": "10GB"
+        },
+        "playgood": {
+          "System_Play": "Play Good",
+          "cpu": "Intel Core i5-6600 3.3GHz or similar",
+          "ram": "8 GB",
+          "card": "GeForce GTX 1050 series or similar",
+          "card_ram": "2048MB",
+          "os": "Windows® 10 64-bit (latest Service Pack)",
+          "freedisk": "10GB"
+        }
+      }
     }
   ]
 }
