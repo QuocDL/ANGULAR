@@ -558,6 +558,40 @@
           "freedisk": "10GB"
         }
       }
+    },
+    {
+      "id": "43f8",
+      "title": "SUBNAUTICA",
+      "short_description": "Descend into the depths of an alien underwater world filled with wonder and peril. Craft equipment, pilot submarines and out-smart wildlife to explore lush coral reefs, volcanoes, cave systems, and more - all while trying to survive.",
+      "thumbnail": "https://cdn.cloudflare.steamstatic.com/steam/apps/264710/capsule_616x353.jpg?t=1700522118",
+      "genre": "Adventure",
+      "game_url": "https://store.steampowered.com/app/264710/Subnautica/?l=vietnamese",
+      "freetogame_profile_url": "https://www.youtube.com/embed/_7BzngvURrk",
+      "gameplay": "https://www.youtube.com/embed/SFuI9ASo_U4",
+      "developer": "Unknown Worlds Entertainment",
+      "publisher": "Unknown Worlds Entertainment",
+      "platform": "PC (windows)",
+      "release_date": "2018-01-23",
+      "system_requirements_medium": {
+        "medium": {
+          "System_Play": "Medium",
+          "cpu": " Intel Haswell 2 cores / 4 threads @ 2.5Ghz or equivalent",
+          "ram": "4 GB",
+          "card": "Intel HD 4600 or equivalent",
+          "card_ram": "",
+          "os": "Windows® 10 64-bit (latest Service Pack)",
+          "freedisk": "6GB"
+        },
+        "playgood": {
+          "System_Play": "Play Good",
+          "cpu": " Intel Haswell 4 cores / 4 threads @ 3.2Ghz or equivalent",
+          "ram": "8 GB",
+          "card": "Nvidia GTX 550 ti or equivalent",
+          "card_ram": "",
+          "os": "Windows® 10 64-bit (latest Service Pack)",
+          "freedisk": "6GB"
+        }
+      }
     }
   ]
 }
