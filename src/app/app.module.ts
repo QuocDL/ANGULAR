@@ -16,6 +16,7 @@ import { SafePipe } from './pipes/safe.pipe';
 import { ProductAdminComponent } from './pages/admin/product-admin/product-admin.component';
 import { AddFormProductComponent } from './pages/admin/add-form-product/add-form-product.component';
 import { FormsModule } from '@angular/forms';
+import { FormAuthComponent } from './pages/form-auth/form-auth.component';
 
 @NgModule({
   declarations: [
@@ -30,13 +31,14 @@ import { FormsModule } from '@angular/forms';
     DetailPageComponent,
     SafePipe,
     ProductAdminComponent,
-    AddFormProductComponent
+    AddFormProductComponent,
+    FormAuthComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [
     provideClientHydration()

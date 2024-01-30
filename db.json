@@ -1,5 +1,25 @@
 {
-  "users": [],
+  "users": [
+    {
+      "email": "quoclcph18659@gmail.com",
+      "password": "$2a$10$r1wp8/sHscRujRRFdt6op.RqeXfYQFjMVs.kWlaiqlqxsj/hK/JE6",
+      "firstname": "Yong",
+      "lastname": "Jin",
+      "userRole": "Admin",
+      "age": 21,
+      "id": 1
+    },
+    {
+      "email": "quoclcph18659@fpt.edu.vn",
+      "password": "$2a$10$dVUyzwklm/Nm8h7vG7T3JOCpd.pBxYePAq.NpwPzRm/WL4.XssLl6",
+      "accessToken": "",
+      "lastname": "yasuo",
+      "age": 0,
+      "firstname": "Quoc",
+      "userRole": "user",
+      "id": 2
+    }
+  ],
   "products": [
     {
       "id": "540",

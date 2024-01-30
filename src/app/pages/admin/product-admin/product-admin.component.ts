@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ProductService } from '../../../services/product.service';
 import { Product } from '../../../interfaces/product';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-admin',
@@ -11,9 +12,15 @@ export class ProductAdminComponent {
   products!: Product[]
   productMessage: undefined | string
   constructor(
-    private service: ProductService
+    private service: ProductService,
+    private router: Router
   ){}
   ngOnInit(){
+    const token = localStorage.getItem('result')
+    const checkPermission = token && JSON.parse(token)
+    if(checkPermission.user.userRole !== "Admin"){
+      this.router.navigate(['/'])
+    }
     this.loadProducts()
   }
 

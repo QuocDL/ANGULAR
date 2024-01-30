@@ -51,6 +51,11 @@ export class AddFormProductComponent {
     ){}
 
   ngOnInit(){
+   const token = localStorage.getItem('result')
+    const checkPermission = token && JSON.parse(token)
+    if(checkPermission.user.userRole !== "Admin"){
+      this.router.navigate(['/'])
+    }
     const id = this.route.snapshot.params['id']
     if(id){
       this.editMode = true
