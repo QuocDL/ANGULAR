@@ -1,8 +1,7 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { User, userRes } from '../interfaces/user';
 import { Observable } from 'rxjs';
-
 @Injectable({
   providedIn: 'root'
 })
@@ -19,4 +18,5 @@ export class AuthServices {
   signInuser(user: User): Observable<userRes>{
     return this.http.post<userRes>(`${this.URI_AUTH}login`, user)
   }
+
 }

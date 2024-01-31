@@ -68,6 +68,7 @@
             </div>
         </div>
     </div>
+  <div *ngIf="product.system_requirements_medium">
     <h1 class="text-center font-medium my-[25px]">System Requirements</h1>
     <div class="flex gap-5">
         <div class="box-meidum">
@@ -75,32 +76,35 @@
                 <h1>{{product.system_requirements_medium.medium.System_Play}}</h1>
                 <div class="mb-[5px]">
                     <label class="block mb-[2px] text-white font-medium" for="">CPU</label>
-                    <input name="lowcpu"  [(ngModel)]="product.system_requirements_medium.medium.cpu"  type="text" class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1"
-                        placeholder="Enter Name CPU">
+                    <input name="lowcpu" [(ngModel)]="product.system_requirements_medium.medium.cpu" type="text"
+                        class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1" placeholder="Enter Name CPU">
                 </div>
                 <div class="mb-[5px]">
                     <label class="block mb-[2px] text-white font-medium" for="">RAM</label>
-                    <input name="lowram" [(ngModel)]="product.system_requirements_medium.medium.ram"  type="text" class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1"
-                        placeholder="Enter RAM">
+                    <input name="lowram" [(ngModel)]="product.system_requirements_medium.medium.ram" type="text"
+                        class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1" placeholder="Enter RAM">
                 </div>
                 <div class="mb-[5px]">
                     <label class="block  mb-[2px] text-white font-medium" for="">GRAPHICS CARD</label>
-                    <input name="lowcard" [(ngModel)]="product.system_requirements_medium.medium.card" type="text" class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1"
-                        placeholder="Enter name Card">
+                    <input name="lowcard" [(ngModel)]="product.system_requirements_medium.medium.card" type="text"
+                        class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1" placeholder="Enter name Card">
                 </div>
                 <div class="mb-[5px]">
                     <label class="block  mb-[2px] text-white font-medium" for="">GRAPHICS MEMORY</label>
-                    <input name="lowcard_ram" [(ngModel)]="product.system_requirements_medium.medium.card_ram"  type="text" class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1"
-                        placeholder="Enter MEMORY">
+                    <input name="lowcard_ram" [(ngModel)]="product.system_requirements_medium.medium.card_ram" type="text"
+                        class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1" placeholder="Enter MEMORY">
                 </div>
                 <div class="mb-[5px]">
-                        <label class="block  mb-[2px] text-white font-medium" for="">FREEDISK</label>
-                        <input name="lowfreedisk" [(ngModel)]="product.system_requirements_medium.medium.freedisk" type="text" class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1" placeholder="Enter disk">
+                    <label class="block  mb-[2px] text-white font-medium" for="">FREEDISK</label>
+                    <input name="lowfreedisk" [(ngModel)]="product.system_requirements_medium.medium.freedisk" type="text"
+                        class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1" placeholder="Enter disk">
                 </div>
                 <div class="mb-[5px]">
                     <label class="block  mb-[2px] text-white font-medium" for="">OS</label>
-                    <select class="bg-gray-500 rounded-lg p-1 w-[260px]" [(ngModel)]="product.system_requirements_medium.medium.os" name="lowos" id="">
-                        <option value="Windows® 10 64-bit (latest Service Pack)">Windows® 10 64-bit (latest Service Pack)</option>
+                    <select class="bg-gray-500 rounded-lg p-1 w-[260px]"
+                        [(ngModel)]="product.system_requirements_medium.medium.os" name="lowos" id="">
+                        <option value="Windows® 10 64-bit (latest Service Pack)">Windows® 10 64-bit (latest Service Pack)
+                        </option>
                         <option value="Mobile">Mobile</option>
                         <option value="Web Browser">Web Browser</option>
                         <option value="Ps4/5">Ps4/5</option>
@@ -111,33 +115,35 @@
         <div class="box-good">
             <div>
                 <h1>{{product.system_requirements_medium.playgood.System_Play}}</h1>
-                <div class="mb-[5px]" >
+                <div class="mb-[5px]">
                     <label class="block mb-[2px] text-white font-medium" for="">CPU</label>
-                    <input name="cpu" [(ngModel)]="product.system_requirements_medium.playgood.cpu" type="text" class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1"
-                        placeholder="Enter Name CPU">
+                    <input name="cpu" [(ngModel)]="product.system_requirements_medium.playgood.cpu" type="text"
+                        class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1" placeholder="Enter Name CPU">
                 </div>
                 <div class="mb-[5px]">
                     <label class="block mb-[2px] text-white font-medium" for="">RAM</label>
-                    <input name="ram" type="text" [(ngModel)]="product.system_requirements_medium.playgood.ram" class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1" placeholder="Enter RAM">
+                    <input name="ram" type="text" [(ngModel)]="product.system_requirements_medium.playgood.ram"
+                        class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1" placeholder="Enter RAM">
                 </div>
                 <div class="mb-[5px]">
                     <label class="block  mb-[2px] text-white font-medium" for="">GRAPHICS CARD</label>
-                    <input name="card" type="text" [(ngModel)]="product.system_requirements_medium.playgood.card" class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1"
-                        placeholder="Enter name Card">
+                    <input name="card" type="text" [(ngModel)]="product.system_requirements_medium.playgood.card"
+                        class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1" placeholder="Enter name Card">
                 </div>
                 <div class="mb-[5px]">
                     <label class="block  mb-[2px] text-white font-medium" for="">GRAPHICS MEMORY</label>
-                    <input name="card_ram" type="text" [(ngModel)]="product.system_requirements_medium.playgood.card_ram" class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1"
-                        placeholder="Enter MEMORY">
+                    <input name="card_ram" type="text" [(ngModel)]="product.system_requirements_medium.playgood.card_ram"
+                        class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1" placeholder="Enter MEMORY">
                 </div>
                 <div class="mb-[5px]">
                     <label class="block  mb-[2px] text-white font-medium" for="">FREEDISK</label>
-                    <input name="freedisk" type="text" [(ngModel)]="product.system_requirements_medium.playgood.freedisk" class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1"
-                        placeholder="Enter disk">
+                    <input name="freedisk" type="text" [(ngModel)]="product.system_requirements_medium.playgood.freedisk"
+                        class="w-[258px] rounded-[5px] bg-gray-500 px-2 py-1" placeholder="Enter disk">
                 </div>
                 <div class="mb-[5px]">
                     <label class="block  mb-[2px] text-white font-medium" for="">OS</label>
-                    <select class="bg-gray-500 rounded-lg p-1 w-[260px]" [(ngModel)]="product.system_requirements_medium.playgood.os" name="os" id="">
+                    <select class="bg-gray-500 rounded-lg p-1 w-[260px]"
+                        [(ngModel)]="product.system_requirements_medium.playgood.os" name="os" id="">
                         <option value="Windows® 10 64-bit (latest Service Pack)">Windows® 10 64-bit (latest Service Pack)
                         </option>
                         <option value="Mobile">Mobile</option>
@@ -148,8 +154,9 @@
             </div>
         </div>
     </div>
+  </div>
     <h1 class=" mt-[25px] mb-[10px] font-bold text-center">GAME VIDEO</h1>
-    <div class="video flex gap-5">
+    <div *ngIf="product.freetogame_profile_url && product.gameplay" class="video flex gap-5">
         <div class="mb-[5px]">
             <label class="block mb-[2px] text-white font-medium" for="">VIDEO TRAILER</label>
             <input name="trailer" [(ngModel)]="product.freetogame_profile_url" type="text"

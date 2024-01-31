@@ -15,7 +15,7 @@ import { DetailPageComponent } from './pages/detail-page/detail-page.component';
 import { SafePipe } from './pipes/safe.pipe';
 import { ProductAdminComponent } from './pages/admin/product-admin/product-admin.component';
 import { AddFormProductComponent } from './pages/admin/add-form-product/add-form-product.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormAuthComponent } from './pages/form-auth/form-auth.component';
 
 @NgModule({
@@ -39,6 +39,7 @@ import { FormAuthComponent } from './pages/form-auth/form-auth.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideClientHydration()

@@ -13,17 +13,25 @@ export class ProductAdminComponent {
   productMessage: undefined | string
   constructor(
     private service: ProductService,
-    private router: Router
+    private router: Router,
+    
   ){}
   ngOnInit(){
-    const token = localStorage.getItem('result')
-    const checkPermission = token && JSON.parse(token)
-    if(checkPermission.user.userRole !== "Admin"){
-      this.router.navigate(['/'])
+    
+    try {
+      const token = localStorage.getItem('result')
+      const checkPermission = token && JSON.parse(token)
+      if(!checkPermission){
+        this.router.navigate(['/'])
+      }else if(checkPermission.user.userRole !== "Admin"){
+          this.router.navigate(['/'])
+      }
+    } catch (error) {
+       console.log('Not Found Token');
     }
     this.loadProducts()
   }
-
+  
   deleteProduct(id: any){
     if(id){
       if(confirm('are you sure to delete?')){

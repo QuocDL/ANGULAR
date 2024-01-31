@@ -3,6 +3,7 @@ export interface User {
      id?: number
         email: string
         password: string
+        confirmPassword: string
         lastname?: string
         firstname?: string
         userRole?: string
@@ -18,6 +19,12 @@ export type userRes = {
         firstname: string
         userRole: string
         age?: number
+    }
+}
+
+export type ErrorServer={
+    HttpErrorResponse: {
+        error: string
     }
 }
 

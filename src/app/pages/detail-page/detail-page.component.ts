@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Product, systemType } from '../../interfaces/product';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from '../../services/product.service';
 
 @Component({
@@ -32,13 +32,19 @@ export class DetailPageComponent {
   }
   constructor(
     private service: ProductService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ){
     this.Product = {} as Product
   }
   
   ngOnInit():void{
     this.loadProducts()
+    const checkPermission = localStorage.getItem('result')
+    if(!checkPermission){
+      this.router.navigate(['/login'])
+      alert('You Need Sign In To View Detail Game')
+    }
   }
 
   loadProducts():void{

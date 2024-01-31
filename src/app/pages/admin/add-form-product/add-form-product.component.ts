@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ProductService } from '../../../services/product.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from '../../../interfaces/product';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-add-form-product',
@@ -43,18 +44,29 @@ export class AddFormProductComponent {
     }
     
   }
+
+
   editMode: boolean = false
   constructor(
+    private fb: FormBuilder,
     private service: ProductService,
     private router: Router,
     private route: ActivatedRoute
     ){}
-
+   
   ngOnInit(){
-   const token = localStorage.getItem('result')
-    const checkPermission = token && JSON.parse(token)
-    if(checkPermission.user.userRole !== "Admin"){
-      this.router.navigate(['/'])
+
+
+    try {
+      const token = localStorage.getItem('result')
+      const checkPermission = token && JSON.parse(token)
+      if(!checkPermission){
+        this.router.navigate(['/'])
+      }else if(checkPermission.user.userRole !== "Admin"){
+          this.router.navigate(['/'])
+      }
+    } catch (error) {
+      console.log('Not Found Token');
     }
     const id = this.route.snapshot.params['id']
     if(id){
